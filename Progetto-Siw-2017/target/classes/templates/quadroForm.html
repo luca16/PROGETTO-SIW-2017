@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Nuovo quadro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Inserisci i dati nel nuovo quadro</h1>
+	<form action="#" th:action="@{/quadro}" th:object="${quadro}"
+		method="post">
+		<div>
+			<div>
+				<span th:text="#{label.titolo}">titolo: </span> <span><input
+					type="text" th:field="*{titolo}" /></span> <span
+					th:if="${#fields.hasErrors('titolo')}" th:text="#{label.mandatory}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.tecnica}">tecnica: </span> <span><input
+					type="text" th:field="*{tecnica}" /></span> <span
+					th:if="${#fields.hasErrors('tecnica')}"
+					th:text="#{label.mandatory}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.lunghezza}">lunghezza: </span> <span><input
+					type="text" th:field="*{lunghezza}" /></span> <span
+					th:if="${#fields.hasErrors('lunghezza')}" th:text="#{label.number}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.altezza}">altezza: </span> <span><input
+					type="text" th:field="*{altezza}" /></span> <span
+					th:if="${#fields.hasErrors('altezza')}" th:text="#{label.number}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.anno}">anno: </span> <span><input
+					type="text" th:field="*{anno}" /></span> <span
+					th:if="${#fields.hasErrors('anno')}" th:text="#{label.number}">Error</span>
+			</div>
+
+			<div>
+				
+				<select>
+				<p>th:each="autore : ${autori}"</p>
+					<option value="${autore.id}">Autore: ${autore.cognome}</option>
+				</select>
+
+			</div>
+		
+
+
+			<div>
+				<span><button type="submit">Submit</button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -8,12 +8,9 @@
 <title>Lista quadri:</title>
 </head>
 <body>
-<h1>Ecco tutti i quadri inseriti: </h1>
-<table>
-		<tr th:each="quadro : ${quadri}" >
-			<td th:text="${quadro.titolo}"> </td> 
-			<td> <a href="/dettagliQuadro">vedi dettagli quadro</a></td>
-		</tr>
-	</table>
+<h1>Eccoti una lista dei quadri presenti nella galleria: </h1>
+<ul th:each="quadro : ${quadri}" >
+			<li> <a th:href="@{'/infoQuadro?id=' + ${quadro.id}}"><span th:text="${quadro.titolo}"></span></a></li>
+	</ul>
 </body>
 </html>

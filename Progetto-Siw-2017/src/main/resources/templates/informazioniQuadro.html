@@ -1,21 +1,27 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
 <body>
+<h1> Hai selezionato il seguente  quadro: </h1>
 	<div>
-    	<p th:text="'Titolo: ' + ${quadro.titolo}" />
+    	<p th:text="'Titolo ' + ${quadro.titolo}" />
     </div>
 	<div>
     	<p th:text="'Tecnica ' + ${quadro.tecnica}" />
     </div>
 	<div>
-    	<p th:text="'Anno: ' + ${quadro.anno}" />	
+    	<p th:text="'Lunghezza ' + ${quadro.lunghezza}" />	
     </div>
     <div>
-    	<p th:text="'Altezza: ' + ${quadro.altezza}" />	
+    	<p th:text="'Altezza' + ${quadro.altezza}" />	
     </div>
     <div>
-    	<p th:text="'Lunghezza: ' + ${quadro.lunghezza}" />	
+    	<p th:text="'Anno  ' + ${quadro.anno}" />	
     </div>
-
+    <div>
+    	<p th:text="'Autore  ' + ${quadro.autore}" />	
+    </div>
 </body>
 </html>

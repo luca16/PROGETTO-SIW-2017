@@ -6,7 +6,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.sql.DataSource;
 
@@ -24,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		
 		.usersByUsernameQuery("SELECT username,password,enabled FROM users where username=?")
-		.authoritiesByUsernameQuery("SELECT username,role FROM user_roles where username=?");
+		.authoritiesByUsernameQuery("SELECT username,ruolo FROM user_roles where username=?");
 	}
 
 	@Override
@@ -32,7 +31,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		
 
-		http.authorizeRequests().antMatchers("/","/home").permitAll().antMatchers("/admin").hasRole("ADMIN")
+		http.csrf().disable()
+		.authorizeRequests()
+		.antMatchers("/","/registrazione").permitAll()
+		.antMatchers("/admin/**").hasAnyRole("ADMIN")
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()

@@ -25,12 +25,14 @@ public class QuadroService {
 		this.quadroRepository.save(quadro);
 	}
 	
-	/*public List<Quadro>findByAnno(Integer anno){
-		Iterable<Quadro> quadri =this.findAll();
-		
-	}*/
+	public Quadro findbyId(Long id) {
+		return this.quadroRepository.findOne(id);
+}
 	
 	public void delete(Quadro quadro){
 		this.quadroRepository.delete(quadro);
 	}
+	public Iterable<Quadro>findByAnno(Integer anno){
+		return this.quadroRepository.findByAnno(anno);
+}
 }

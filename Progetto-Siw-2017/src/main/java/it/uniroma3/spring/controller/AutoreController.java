@@ -50,4 +50,26 @@ public class AutoreController {
 		model.addAttribute("autori", this.autoreService.findAll());
 		return "listaAutori";
 	}
+	
+	@GetMapping("/eliminaAutore")
+	public String eliminaAutore(Model model){
+		model.addAttribute("autore", autoreService.findAll());
+		return "gestisciAutori";
+	}
+	
+	@GetMapping("/eliminaA")
+	public String eliminaAutore(Model model, @ModelAttribute("id") Long id){
+		Autore autore = autoreService.findbyId(id);
+		autoreService.delete(autore);
+		model.addAttribute("autori", autoreService.findAll());
+		return "gestisciAutori";
+	}
+	
+	@GetMapping("/infoAutore")
+	public String mostraInfo( Model model, @ModelAttribute("id") Long id){
+		
+		Autore autore = autoreService.findbyId(id);
+		model.addAttribute(autore);
+		return "informazioniAutore";
+}
 }

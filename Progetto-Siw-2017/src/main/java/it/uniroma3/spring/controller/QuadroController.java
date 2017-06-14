@@ -25,14 +25,14 @@ public class QuadroController {
 	@Autowired
 	private AutoreService autoreService;
 	
-	@GetMapping("/quadro")
+	@GetMapping("/nuovoQuadro")
 	public String showForm(Quadro quadro,Model model){
 		model.addAttribute("autori", autoreService.findAll());
 		return "quadroForm";
 	}
 
 	
-	@PostMapping("/quadro")
+	@PostMapping("/nuovoQuadro")
 	public String checkQaudroInfo(@Valid @ModelAttribute Quadro quadro,
 			BindingResult bindingResult, Model model){
 		
@@ -47,11 +47,6 @@ public class QuadroController {
 		
 	}
 	
-	@GetMapping("/dettagliQuadro")
-	public String infoQuadro(Quadro quadro,Model model){
-		
-		return "informazioniQuadro";
-	}
 	
 	@GetMapping("/quadriPerAnno")
 	public String getQuadriPerAnno(Model model){
@@ -66,6 +61,28 @@ public class QuadroController {
 		model.addAttribute("quadri", this.quadroService.findAll());
 		return "quadriPerNome";
 	}
+	
+	@GetMapping("/eliminaQuadro")
+	public String eliminaQuadro(Model model){
+		model.addAttribute("quadri", quadroService.findAll());
+		return "gestisciQuadri";
+	}
+	
+	@GetMapping("/eliminaQ")
+	public String elimina(Model model, @ModelAttribute("id") Long id){
+		Quadro quadro = quadroService.findbyId(id);
+		quadroService.delete(quadro);
+		model.addAttribute("quadri", quadroService.findAll());
+		return "gestisciQuadri";
+	}
+	
+	@GetMapping("/infoQuadro")
+	public String mostraInfo( Model model, @ModelAttribute("id") Long id){
+		
+		Quadro quadro = quadroService.findbyId(id);
+		model.addAttribute(quadro);
+		return "informazioniQuadro";
+}
 	
 	
 }

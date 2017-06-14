@@ -1,0 +1,29 @@
+
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Quadri:</title>
+</head>
+<body>		
+<h1>I quadri presenti nella galleria sono:</h1>
+	<table>
+		<tr th:each="quadro : ${quadri}">
+
+
+			<td><a th:href="@{'/quadroInfo?id=' + ${quadro.id}}"><span
+					th:text="${quadro.titolo}"></span></a></td>
+			
+			<td><form action="/eliminaQ" method="get">
+				<input type="hidden" th:value="${quadro.id}" name="id"/>
+				<input type="submit" th:value="elimina" name="elimina"/>
+			</form></td>
+			
+			
+		</tr>
+	</table>
+</body>
+</html>

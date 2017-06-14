@@ -13,8 +13,8 @@ public class GalleriaController {
 		return "percorsiGalleria";
 	}
 	
-	@GetMapping("/controlloAmministratore")
+	@GetMapping("gestisciElementi")
 	public String showFormGestioneGalleria(){
-		return "paginaDiGestione";
+		return "gestioneElementi";
 	}
 }

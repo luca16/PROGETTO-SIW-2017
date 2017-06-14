@@ -8,8 +8,9 @@
 <title>Autori:</title>
 </head>
 <body>
+<h1> Eccoti una lista degli autori presenti nella galleria:</h1>
 	<ul th:each="autore : ${autori}">
-			<li th:text="${autore.nome}"></li>
+			<li> <a th:href="@{'/infoAutore?id=' + ${autore.id}}"><span th:text="${autore.cognome}"></span></a></li>
 	</ul>
 
 </body>

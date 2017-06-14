@@ -33,8 +33,9 @@
                     <span><input type="text" th:field="*{annoMorte}" /></span>
                     <span th:if="${#fields.hasErrors('annoMorte')}" th:text="#{label.number}">Error</span>
                 </div>
-                <div>
-                    <span><button type="submit">Submit</button></span>
+                <div><br/>
+                    <span><button type="submit">Inserisci</button></span>
+                    <span> <button type="reset" > cancella </button></span>
                 </div>
             </div>
         </form>

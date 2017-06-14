@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Inserisci i dati nel nuovo quadro</h1>
-	<form action="#" th:action="@{/quadro}" th:object="${quadro}"
+	<form action="#" th:action="@{/nuovoQuadro}" th:object="${quadro}"
 		method="post">
 		<div>
 			<div>
@@ -39,18 +39,16 @@
 			</div>
 
 			<div>
-				
-				<select>
-				<p>th:each="autore : ${autori}"</p>
-					<option value="${autore.id}">Autore: ${autore.cognome}</option>
-				</select>
 
+			
+			
 			</div>
-		
+
 
 
 			<div>
 				<span><button type="submit">Submit</button></span>
+				<span> <button type="reset" > cancella </button></span>
 			</div>
 		</div>
 	</form>

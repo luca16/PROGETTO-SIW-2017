@@ -3,10 +3,10 @@
     <title>Login</title>
   </head>
   <body>
+  <h1> Per poter accedere alla nostra galleria devi effettuare il login!</h1>
     <div>
         <form name="f" th:action="@{/login}" method="post">               
-            <fieldset>
-                <legend>Loggati</legend>
+            
                 <div th:if="${param.error}" class="alert alert-error">    
                     Username e password non validi.
                 </div>
@@ -18,10 +18,14 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password"/>    
                 <div class="form-actions">
-                    <button type="submit" class="btn">Log in</button>
+                <br/>
+                    <span><button type="submit" class="btn">Log in</button></span>
+                    <span> <button type="reset" > cancella </button></span>
                 </div>
-            </fieldset>
+            
         </form>
+        
+        <h2>Sei un nuovo utente? </h2>  <h1> <a href ="/registrazione" > Registrati </a></h1>
     </div>
   </body>
 </html>

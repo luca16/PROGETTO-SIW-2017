@@ -1,12 +1,12 @@
 package it.uniroma3.spring.repository;
-import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import it.uniroma3.spring.model.Autore;
 
 
-public interface AutoreRepository  extends CrudRepository<Autore, Long>{
+public interface AutoreRepository  extends JpaRepository<Autore, Long>{
 	
-	//List<Autore> trovaPerCognome(String cognome);
+	
 }

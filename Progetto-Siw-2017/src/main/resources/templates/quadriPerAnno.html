@@ -8,7 +8,7 @@
 <title>Lista anni:</title>
 </head>
 <body>
-<h1>Eccoti una lista dei quadri presenti nella galleria ordinati per anno: </h1>
+<h1>Eccoti una lista dei quadri presenti nella galleria : </h1>
 	<ul th:each="quadro : ${quadri}" >
 			<li> <a th:href="@{'/infoQuadro?id=' + ${quadro.id}}"><span th:text="${quadro.anno}"></span></a></li>
 	</ul>

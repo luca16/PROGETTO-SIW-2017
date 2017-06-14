@@ -55,11 +55,11 @@ public class QuadroController {
 		return "quadriPerAnno";
 	}
 	
-	@GetMapping("/quadriPerNome")
+	@GetMapping("/quadriPerTitolo")
 	public String getQuadriPerNome(Model model){
 		
 		model.addAttribute("quadri", this.quadroService.findAll());
-		return "quadriPerNome";
+		return "quadriPerTitolo";
 	}
 	
 	@GetMapping("/eliminaQuadro")

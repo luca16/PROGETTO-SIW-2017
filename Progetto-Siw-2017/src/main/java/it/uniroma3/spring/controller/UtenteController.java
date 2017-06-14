@@ -53,6 +53,6 @@ public class UtenteController {
 	            ruoloUtenteService.saveRole(utente, ruolo);
 
 	        }
-	        return "redirect:/index";
+	        return "/resultRegistrazione";
 	    }
 }

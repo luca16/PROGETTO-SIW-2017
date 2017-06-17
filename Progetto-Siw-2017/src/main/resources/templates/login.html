@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+
+  <!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org" lang="en" class="no-js">
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8" />
 <title>Login</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -12,14 +13,14 @@
 <!-- GLOBAL MANDATORY STYLES -->
 <link
 	href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700"
-	rel="stylesheet" type="text/css">
+	rel="stylesheet" type="text/css"/>
 <link href="vendor/simple-line-icons/simple-line-icons.min.css"
 	rel="stylesheet" type="text/css" />
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
 	type="text/css" />
 
 <!-- PAGE LEVEL PLUGIN STYLES -->
-<link href="css/animate.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet"/>
 <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet"
 	type="text/css" />
 
@@ -53,12 +54,12 @@
 					<div class="menu-container">
 						<a class="navbar-nav navbar-nav-left">Galleria d'arte</a>
 						<ul class="navbar-nav navbar-nav-right">
+							
 							<li class="nav-item"><a
-								class="nav-item-child nav-item-hover active" href="welcome.html">Home</a></li>
+								class="nav-item-child nav-item-hover" href="/visitaGalleria">Galleria</a></li>
 							<li class="nav-item"><a
-								class="nav-item-child nav-item-hover" href="visitaGalleria.html">Galleria</a></li>
-							<li class="nav-item"><a
-								class="nav-item-child nav-item-hover" href="listaAutori.html">Autori</a></li>
+								class="nav-item-child nav-item-hover" href="/listaAutori">Autori</a></li>
+							  <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/registrazione">Registrati</a></li>
 						</ul>
 					</div>
 				</div>
@@ -79,56 +80,59 @@
 					class="active"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 			</ol>
+			</div>
 		</div>
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
 				<img class="img-responsive" src="img/1920x1080/01.jpg"
-					alt="Slider Image">
+					alt="Slider Image"/>
 				<div class="container">
 					<div class="carousel-centered">
 						<div class="margin-b-40">
 
 							<div>
 								<h1>
-									<a class="color-base fweight-700"> Per poter accedere alla
+									<a class="color-base fweight-700"/> Per poter accedere alla
 										nostra galleria devi effettuare il login!
 								</h1>
 								<form name="f" th:action="@{/login}" method="post">
 
 									<div th:if="${param.error}" class="alert alert-error">
-										<a class="color-base fweight-700">Username e password non
+										<a class="color-base fweight-700"/>Username e password non
 											validi. 
 									</div>
 									<div th:if="${param.logout}" class="alert alert-success">
-										<a class="color-base fweight-700">Sei loggato. 
+										<a class="color-base fweight-700"/>Sei loggato. 
 									</div>
-									<label for="username"><a class="color-base fweight-700">Username</label>
+									<label for="username"><a class="color-base fweight-700"/>Username</label>
 									<input type="text" id="username" name="username" /> <label
-										for="password"><a class="color-base fweight-700">Password</label>
+										for="password"><a class="color-base fweight-700"/>Password</label>
 									<input type="password" id="password" name="password" />
 									<div class="form-actions">
 										<br /> <span><button type="submit" class="btn">
-												<a class="color-base fweight-700">Log in
+												<a class="color-base fweight-700"/>Log in
 											</button></span> <span>
 											<button type="reset">
-												<a class="color-base fweight-700">cancella 
+												<a class="color-base fweight-700"/>cancella 
 											</button>
 										</span>
 									</div>
 
 								</form>
-
+<br/> <br/>
 								<h2>
-									<a class="color-base fweight-700">Sei un nuovo utente? 
+									<a class="color-base fweight-700"/>Sei un nuovo utente? 
 								</h2>
+								<br/>
 								<h1>
 									<a href="/registrazione"> <a
-										class="color-base fweight-700">Registrati </a>
+										class="color-base fweight-700"/>Registrati </a>
 								</h1>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -141,7 +145,7 @@
 				<div class="content container">
 					<div class="row">
 						<div class="col-xs-6">
-							<img class="footer-logo" src="img/logo.png" alt="Asentus Logo">
+							<img class="footer-logo" src="img/logo.png" alt="Asentus Logo"/>
 						</div>
 						<div class="col-xs-6 text-right">
 							<p class="margin-b-0">

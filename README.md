@@ -5,28 +5,31 @@ Progetto esame sistemi informativi sul web 2017, svolto da Luca De Silvestris e 
 CASI D'USO:
 
 Caso d’uso UC1:  REGISTRAZIONE NUOVO UTENTE
-Attore primario: utente non registrato
 
-Scenario principale di successo:
+ Attore primario: utente non registrato
 
-1. Un utente non registrato si reca sulla voce Registrati.
-2. Il sistema mostra i campi da compilare per la registrazione.
-3. L'utente inserisce l’ username e la password e inoltra la richiesta.
-4. Il sistema controlla i dati inseriti e li registra.
+ Scenario principale di successo:
+
+  1. Un utente non registrato si reca sulla voce Registrati.
+  2. Il sistema mostra i campi da compilare per la registrazione.
+  3. L'utente inserisce l’ username e la password e inoltra la richiesta.
+  4. Il sistema controlla i dati inseriti e li registra.
 
 
 Caso d’uso UC2:  LOGIN UTENTE
+
 Attore primario: utente  registrato
 
 Scenario principale di successo:
 
-1. Un utente  registrato si reca sulla voce Login.
-2. Il sistema mostra i campi da compilare per  l’ autenticazione.
-3. L'utente inserisce l’ username e la password e inoltra la richiesta.
-4. Il sistema controlla i dati inseriti ed effettua il login.
+  1. Un utente  registrato si reca sulla voce Login.
+  2. Il sistema mostra i campi da compilare per  l’ autenticazione.
+  3. L'utente inserisce l’ username e la password e inoltra la richiesta.
+  4. Il sistema controlla i dati inseriti ed effettua il login.
 
 
 Caso d’uso UC3: CONSULTA QUADRI
+
 Attore primario: utente  registrato
 
 Scenario principale di successo:
@@ -39,7 +42,8 @@ Scenario principale di successo:
 
 
 Caso d'uso UC3: CONSULTA AUTORI
-  Attore primario: utente non registrato
+ 
+ Attore primario: utente non registrato
 
  Scenario principale di successo: 
 
@@ -51,7 +55,8 @@ Caso d'uso UC3: CONSULTA AUTORI
 
 
 Caso d'uso UC4: NUOVO AUTORE
- Attore primario: amministratore del sistema.
+
+Attore primario: amministratore del sistema.
 
   Scenario principale di successo:
 
@@ -63,6 +68,7 @@ Caso d'uso UC4: NUOVO AUTORE
 
 
 Caso d'uso UC5: NUOVO  QUADRO
+ 
  Attore primario: amministratore del sistema.
 
   Scenario principale di successo:
@@ -75,6 +81,7 @@ Caso d'uso UC5: NUOVO  QUADRO
 
 
 Caso d'uso UC6: ELIMINA QUADRO
+ 
  Attore primario: amministratore del sistema.
   
   Scenario principale di successo:

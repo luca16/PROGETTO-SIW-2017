@@ -16,6 +16,7 @@ Caso d’uso UC1:  REGISTRAZIONE NUOVO UTENTE
   4. Il sistema controlla i dati inseriti e li registra.
 
 
+
 Caso d’uso UC2:  LOGIN UTENTE
 
 Attore primario: utente  registrato
@@ -26,6 +27,7 @@ Scenario principale di successo:
   2. Il sistema mostra i campi da compilare per  l’ autenticazione.
   3. L'utente inserisce l’ username e la password e inoltra la richiesta.
   4. Il sistema controlla i dati inseriti ed effettua il login.
+
 
 
 Caso d’uso UC3: CONSULTA QUADRI
@@ -41,7 +43,8 @@ Scenario principale di successo:
   5. L'utente ripete i passi precedenti un numero indefinito di volte.
 
 
-Caso d'uso UC3: CONSULTA AUTORI
+
+Caso d'uso UC4: CONSULTA AUTORI
  
  Attore primario: utente non registrato
 
@@ -54,7 +57,7 @@ Caso d'uso UC3: CONSULTA AUTORI
   5. L'utente ripete i passi precedenti un numero indefinito di volte.
 
 
-Caso d'uso UC4: NUOVO AUTORE
+Caso d'uso UC5: NUOVO AUTORE
 
 Attore primario: amministratore del sistema.
 
@@ -67,7 +70,8 @@ Attore primario: amministratore del sistema.
   5. Il sistema inserisce i dati del nuovo autore.
 
 
-Caso d'uso UC5: NUOVO  QUADRO
+
+Caso d'uso UC6: NUOVO  QUADRO
  
  Attore primario: amministratore del sistema.
 
@@ -80,7 +84,8 @@ Caso d'uso UC5: NUOVO  QUADRO
   5. Il sistema inserisce i dati del nuovo quadro.
 
 
-Caso d'uso UC6: ELIMINA QUADRO
+
+Caso d'uso UC7: ELIMINA QUADRO
  
  Attore primario: amministratore del sistema.
   
